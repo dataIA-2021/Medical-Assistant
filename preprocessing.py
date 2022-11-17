@@ -16,16 +16,8 @@ m="Diabetes Diabetes mellitus"
 o="Open wound due to trauma Open wound due to trauma is encountered rarely on Symcat. We will add..."
 p="Chronic ulcer Also known as Chronic Skin Ulcer An ulcer is a discontinuity or break in a bod..."
 to_clean=[]
-to_clean.append(q)
-to_clean.append(b)
-to_clean.append(h)
-to_clean.append(t)
-to_clean.append(l)
-to_clean.append(v)
-to_clean.append(c)
-to_clean.append(m)
-to_clean.append(o)
-to_clean.append(p)
+to_clean.extend([q, b, h, t, l, v, c, m, o, p])
+
 for i in range(4, 10):
     for s in to_clean:
         df = df[df[f"{i}"] != s]
